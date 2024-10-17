@@ -20,3 +20,37 @@ Clone the repository to your local machine using:
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
+2. Install Dependencies
+Make sure you have all the required Python packages by running:
+
+bash
+Copy code
+pip install -r requirements.txt
+3. Azure Setup
+Azure OpenAI Account: Make sure you have an Azure account with OpenAI services enabled.
+Create a Cognitive Services Resource: Set up your Azure Cognitive Services resource to use the Text Analytics API.
+Set Environment Variables: Replace the placeholders in the code with your Azure Text Analytics endpoint and key.
+4. Update the Code with Your Azure Credentials
+In the app.py file, replace the following with your Azure credentials:
+
+python
+Copy code
+endpoint = "https://your-resource-name.cognitiveservices.azure.com/"
+training_key = "your-azure-key"
+5. Run the Chatbot
+Start the Streamlit app with the following command:
+
+bash
+Copy code
+streamlit run app.py
+This will launch the chatbot in your default web browser, and you can start interacting with it immediately.
+
+How the Chatbot Works
+User Input: The user enters a message into the chatbox.
+Sentiment Analysis: The chatbot uses Azure's Text Analytics API to analyze the sentiment of the message.
+Response Generation: Based on the sentiment and keywords in the user message, the chatbot generates a response.
+Interactive UI: The conversation history is displayed in the chat interface, allowing for a seamless chat experience.
+Technologies Used
+Azure OpenAI: To perform text analysis and sentiment detection.
+Streamlit: For building the interactive web interface.
+Python: Programming language used for developing the chatbot logic.
